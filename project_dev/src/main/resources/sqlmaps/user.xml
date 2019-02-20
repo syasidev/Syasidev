@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dev.user.UserMapper">
+	<!-- 
+	USER_NO NUMBER PRIMARY KEY,
+	USER_ID VARCHAR2(20) NOT NULL,
+	USER_PW VARCHAR2(20) NOT NULL,
+	USER_NICKNAME VARCHAR2(20) NOT NULL,
+	USER_GRADE NUMBER NOT NULL,
+	CREATE_DATE DATE default sysdate
+	 -->
+	<resultMap type="com.dev.user.UserVO" id="UserResultMap">
+		<result property="userNo" column="USER_NO"/>
+		<result property="userId" column="USER_ID"/>
+		<result property="userPw" column="USER_PW"/>
+		<result property="userNickname" column="USER_NICKNAME"/>
+		<result property="userGrade" column="USER_GRADE"/>
+		<result property="createDate" column="CREATE_DATE"/>
+	</resultMap>
+
+	<!-- User 조회 -->
+	<select id="retriveUser" resultMap="UserResultMap">
+		select * from TB_USER
+	</select>
+	
+	<select id="loginUser" resultMap="UserResultMap">
+		select * from TB_USER where USER_ID = #{userId} and USER_PW = #{userPw} 
+	</select>
+	
+	
+	
+</mapper>
