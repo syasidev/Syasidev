@@ -141,11 +141,13 @@
         </dependency>
 
 	 	<!-- ojdbc6 - 존나짜증나서 maven local repo에 직접 쳐넣음 -->
-	 	<dependency>
+<!-- 	 	
+		<dependency>
 		    <groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
    			<version>11.1.0.7.0</version>
-		</dependency>
+		</dependency> 
+-->
 		
 	</dependencies>
     <build>
