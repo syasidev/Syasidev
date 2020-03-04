@@ -39,10 +39,10 @@
 	    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
 	    
 	    	<%-- header --%>
-	    	<jsp:include page="common/header.jsp" flush="false"/>
+	    	<jsp:include page="/common/header.jsp" flush="false"/>
 	    	
 	    	<%-- aside --%>
-	    	<jsp:include page="common/aside.jsp" flush="false"/>	
+	    	<jsp:include page="/common/aside.jsp" flush="false"/>	
 	        
 	        <%-- **************************
 	             *    Contents - start    *
@@ -83,7 +83,7 @@
 	             ************************** --%>
 	        
 			<%-- footer --%>
-	    	<jsp:include page="common/footer.jsp" flush="false"/>	
+	    	<jsp:include page="/common/footer.jsp" flush="false"/>	
 		
 		<%-- Main wrapper --%>
 		</div>
